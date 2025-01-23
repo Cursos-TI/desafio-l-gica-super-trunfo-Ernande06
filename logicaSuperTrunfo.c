@@ -19,6 +19,7 @@ int main() {
     double densidade1, densidade2, pibper1, pibper2;
     int pt1,pt2;
     double power1, power2;
+    int opcao;
    
     /* Cadastro das Cartas:
      Implemente a lógica para solicitar ao usuário que insira os dados das cidades
@@ -97,23 +98,84 @@ int main() {
 
     printf("SPECIAL = %f\n", power2);
     printf("===========================\n");
+    
+    
+    //Menu Interativo
 
-    // Comparação de Cartas:
+    printf("=-=-=-=-=-=-=-=-=-=-=-\n");
+    printf(" Menu de Comparação \n");
+    printf("[1] POPULAÇÃO \n");
+    printf("[2] ÁREA EM KM² \n");
+    printf("[3] DENSIDADE POPULACIONAL \n");
+    printf("[4] PONTOS TURISTICOS \n");
+    printf("[0] SAIR \n");
+    printf("=-=-=-=-=-=-=-=-=-=-=-\n");
+    printf("\nEscolha uma opção a ser Comparado: ");
+    scanf("%d", &opcao);
+
+       // Comparação de Cartas:
     // Desenvolva a lógica de comparação entre duas cartas.
     // Utilize estruturas de decisão como if, if-else para comparar atributos como população, área, PIB, etc.
 
-        if(area1 > area2)
+    switch (opcao)
     {
-        printf("Carta %s, Estado  %s \n****** Venceu!******\n", cod1, estado1);
-
-    }else if (area1 < area2)
-    {
-        printf("Carta %s, Estado  %s \n****** Venceu! ******\n", cod2, estado2); 
-    }else
-    {
-        printf("****** EMPATE ******\n");        
+    case 1: 
+        if(pop1 > pop2){
+      printf("====================================\n");
+      printf("Carta %d, %s \ndo Estado  %s \n****** Venceu!******\n", cod1, nomecidade1, estado1);
+      printf("====================================\n");
     }
+    else { 
+        printf("====================================\n");
+        printf("Carta %d, %s \ndo Estado  %s \n****** Venceu! ******\n", cod2, nomecidade2, estado2); 
+        printf("====================================\n");
+    }
+    break;
+
+    case 2: 
+        if(area1 > area2){
+        printf("====================================\n");
+        printf("Carta %s, %s \ndo Estado  %s \n****** Venceu!******\n", cod1, nomecidade1, estado1);
+        printf("====================================\n");
+    }else {
+        printf("====================================\n");
+        printf("Carta %s, %s \ndo Estado  %s \n****** Venceu! ******\n", cod2, nomecidade2, estado2); 
+        printf("====================================\n");
+    }        
+    break;
     
-    printf("====================================\n");
+    case 3: 
+        if(densidade1 < densidade2){
+        printf("====================================\n");
+        printf("Carta %s,  %s \ndo Estado  %s \n****** Venceu!******\n", cod1, nomecidade1, estado1);
+        printf("====================================\n");
+    } else {
+        printf("====================================\n");
+        printf("Carta %s,  %s \ndo Estado  %s \n****** Venceu! ******\n", cod2, nomecidade2, estado2); 
+        printf("====================================\n");
+    }        
+    break;
+
+    case 4: 
+        if(pt1 > pt2){
+        printf("====================================\n");
+        printf("Carta %s,  %s \ndo Estado  %s \n****** Venceu!******\n", cod1, nomecidade1, estado1);
+        printf("====================================\n");
+    } else {
+        printf("====================================\n");
+        printf("Carta %s,  %s \ndo Estado  %s \n****** Venceu! ******\n", cod2, nomecidade2, estado2); 
+        printf("====================================\n");
+    }        
+    break;
+
+    case 0: 
+        printf("====================================\n");
+        printf("Sistema Finalizado");  
+        printf("====================================\n");
+    break;
+
+    }
+ 
     return 0;
+
 }
