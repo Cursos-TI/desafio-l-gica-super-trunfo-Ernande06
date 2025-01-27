@@ -33,6 +33,8 @@ int main() {
      scanf("%s", codigo);
      
      (Repita para cada propriedade)*/
+
+     //CADASTROS DA CARTA 1
       
     printf("========SUPER TRUNFO =========\n");
     
@@ -67,7 +69,7 @@ int main() {
 
     printf("SPECIAL = %f", power1);
 
-
+    // CADASTRO DE CARTA 2
     printf("\n   ***     \n");
     printf("CADASTRE 2ª CARTA\n");
     
@@ -118,7 +120,7 @@ int main() {
     printf("Escolha mais uma opção: ");
     scanf("%d", &opcao2);
     
-       // Comparação de Cartas:
+       // Comparação da Carta 1:
     // Desenvolva a lógica de comparação entre duas cartas.
     // Utilize estruturas de decisão como if, if-else para comparar atributos como população, área, PIB, etc.
   
@@ -253,6 +255,8 @@ int main() {
         printf("====================================\n");
     break;
     }
+
+    //Resultado Final
 
     if (p1 > p2)
     {
